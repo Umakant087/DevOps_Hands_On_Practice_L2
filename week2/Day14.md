@@ -96,3 +96,10 @@ deploy:
   stage: deploy
   script:
     - helm upgrade --install pathnex-nginx pathnex/nginx-ingress
+
+
+🔹 Docker
+# CMD vs ENTRYPOINT
+FROM ubuntu
+ENTRYPOINT ["echo"]
+CMD ["Hello Pathnex"]

@@ -136,3 +136,13 @@ deploy_azure:
   script:
     - kubectl --context=azure-cluster apply -f kubernetes/deployment.yaml
  
+
+ 🔹 Docker
+ # MySQL Container (Note - Here " \" means to be continue - it can be written in a single line")
+docker run -d \
+--name pathnex-mysql \
+-e MYSQL_ROOT_PASSWORD=root \
+mysql:8
+
+# Real Path
+/var/lib/mysql

@@ -121,3 +121,11 @@ deploy:
     - kubectl rollout status deployment/blue-deployment
     - kubectl rollout status deployment/green-deployment
 
+
+
+🔹 Docker
+# Redis Container
+docker run -d --name pathnex-redis redis
+
+# Real Path
+/data

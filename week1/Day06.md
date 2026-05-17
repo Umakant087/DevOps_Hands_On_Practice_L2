@@ -59,3 +59,17 @@ do
     echo "$service is not running"
   fi
 done
+
+
+🔹 Docker
+# Node.js Application (JavaScript)
+console.log("Hello Pathnex");
+
+# Docker File
+FROM node:18
+WORKDIR /opt/pathnex/node-app
+COPY app.js /opt/pathnex/node-app/
+CMD ["node", "/opt/pathnex/node-app/app.js"]
+
+# Real Path
+/opt/pathnex/node-app

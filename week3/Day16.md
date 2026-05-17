@@ -131,3 +131,16 @@ deploy:
       else
         kubectl --context=us-west apply -f kubernetes/dev-deployment.yaml
       fi
+
+
+🔹 Docker
+# Shell Script Execution
+#!/bin/bash
+echo "Hello Pathnex"
+
+# Docker File
+FROM ubuntu
+WORKDIR /opt/pathnex/scripts
+COPY start.sh /opt/pathnex/scripts/
+RUN chmod +x /opt/pathnex/scripts/start.sh
+CMD ["/opt/pathnex/scripts/start.sh"]

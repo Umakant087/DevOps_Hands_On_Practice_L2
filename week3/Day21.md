@@ -104,3 +104,14 @@ restore:
   script:
     - tar -xzvf /tmp/backup.tar.gz -C kubernetes/
 
+
+
+🔹 Docker
+# Docker Compose
+version: '3'
+services:
+  web:
+    image: nginx
+    container_name: pathnex-nginx
+    ports:
+      - "80:80"

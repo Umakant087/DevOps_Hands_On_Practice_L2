@@ -110,3 +110,10 @@ test:
   stage: test
   script:
     - echo "Running tests..."
+
+
+🔹 Docker
+# .dockerignore file
+node_modules
+.git
+temp

@@ -108,3 +108,17 @@ deploy_cluster_2:
   script:
     - kubectl --context=us-west-cluster apply -f kubernetes/deployment.yaml
 
+
+
+🔹 Docker
+# Compose with MySQL
+version: '3'
+services:
+  db:
+    image: mysql:8
+    container_name: pathnex-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  web:
+    image: nginx
+    container_name: pathnex-web

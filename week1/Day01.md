@@ -14,3 +14,14 @@ Rewrite this YAML manually:
       yum:
         name: nginx
         state: present
+
+
+🔹 Docker
+# Docker Installation & First Container
+docker --version
+docker run ubuntu echo "Hello Pathnex"
+
+
+# Docker File
+FROM ubuntu:22.04
+CMD ["echo", "Hello Pathnex"]

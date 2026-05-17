@@ -83,3 +83,9 @@ deploy:
   script:
     - echo "Deploying with secure credentials"
     - aws ec2 run-instances --image-id ami-0abcd1234 --count 1 --instance-type t2.micro --access-key $AWS_ACCESS_KEY --secret-key $AWS_SECRET_KEY
+
+
+🔹 Docker
+# Docker Logs & Inspect
+docker logs pathnex-nginx
+docker inspect pathnex-nginx

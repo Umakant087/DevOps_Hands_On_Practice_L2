@@ -33,3 +33,14 @@ spec:
         - podSelector:
             matchLabels:
               app: pathnex-db
+
+
+
+🔹 Docker
+# Docker Save, Load & Backup
+docker save -o pathnex-nginx.tar pathnex-nginx
+
+docker load -i pathnex-nginx.tar
+
+# Bash
+docker run --rm -v pathnex-volume:/data -v $(pwd):/backup ubuntu tar czf /backup pathnex-backup.tar.gz /data

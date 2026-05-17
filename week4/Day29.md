@@ -52,3 +52,37 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+
+
+🔹 Docker
+# Docker Security & Cleanup
+FROM nginx
+RUN useradd pathnexuser
+USER pathnexuser
+
+# Commands
+docker container prune
+docker image prune
+docker volume prune
+docker network prune
+docker system prune -a
+
+
+# Final Docker Project
+version: '3'
+services:
+  frontend:
+    image: nginx
+    container_name: pathnex-frontend
+    ports:
+      - "80:80"
+  backend:
+    build: ./backend
+    container_name: pathnex-backend
+    ports:
+      - "5000:5000"
+  database:
+    image: mysql:8
+    container_name: pathnex-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root

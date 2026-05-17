@@ -52,3 +52,20 @@ spec:
 #!/bin/bash
 echo "Current user: $(whoami)"
 echo "Current user groups: $(groups)"
+
+
+🔹 Docker
+# Docker File for Nginx Web Server
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+
+# HTML
+<h1>Hello Pathnex</h1>
+
+# Bash
+# Real Path
+/usr/share/nginx/html
+
+# Bash
+docker build -t pathnex-nginx .
+docker run -d -p 80:80 pathnex-nginx

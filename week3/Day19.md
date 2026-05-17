@@ -102,3 +102,20 @@ deploy:
   script:
     - kubectl apply -f kubernetes/deployment.yaml
     - kubectl get pods --watch
+
+
+🔹 Docker
+# Flask Application (Python)
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def home():
+    return "Hello Pathnex"
+app.run(host='0.0.0.0', port=5000)
+
+# Docker File
+FROM python:3.11
+WORKDIR /opt/pathnex/flask-app
+COPY . /opt/pathnex/flask-app/
+RUN pip install flask
+CMD ["python", "/opt/pathnex/flask-app/app.py"]

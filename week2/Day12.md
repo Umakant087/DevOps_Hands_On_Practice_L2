@@ -108,3 +108,16 @@ deploy:
   stage: deploy
   script:
     - kubectl apply -f kubernetes/deployment.yaml
+
+
+🔹 Docker
+# Docker Volumes
+FROM ubuntu
+VOLUME ["/opt/pathnex/data"]
+CMD ["sleep", "1000"]
+
+# Real Path
+/opt/pathnex/data
+
+# Bash command
+docker volume create pathnex-volume

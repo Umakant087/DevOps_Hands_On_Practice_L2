@@ -90,3 +90,10 @@ deploy:
     - kubectl apply -f kubernetes/deployment.yaml
     - kubectl get pods --watch
 
+
+
+🔹 Docker
+# Docker Networking
+docker network create pathnex-network
+docker run -dit --name c1 --network pathnex-network ubuntu
+docker run -dit --name c2 --network pathnex-network ubuntu

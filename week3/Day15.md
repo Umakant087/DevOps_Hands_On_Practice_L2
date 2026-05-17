@@ -92,3 +92,11 @@ deploy:
         kubectl apply -f kubernetes/dev-deployment.yaml
       fi
 
+
+🔹 Docker
+# Multi RUN Commands
+FROM ubuntu
+RUN apt update && \
+    apt install curl -y && \
+    apt install vim -y
+CMD ["echo", "Hello Pathnex"]

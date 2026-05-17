@@ -91,3 +91,9 @@ push:
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD"
     - docker push pathnex-app
 
+
+🔹 Docker
+# Alpine Linux
+FROM alpine:latest
+WORKDIR /opt/pathnex/alpine-app
+CMD ["echo", "Hello Pathnex"]

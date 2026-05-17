@@ -96,3 +96,10 @@ deploy:
     - helm repo add stable https://charts.helm.sh/stable
     - helm install pathnex-nginx stable/nginx-ingress
 
+
+
+🔹 Docker
+# EXPOSE & Port Mapping
+FROM nginx
+EXPOSE 80
+docker run -d -p 8080:80 nginx
